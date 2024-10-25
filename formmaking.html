@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       body{
+            background-image:url("agrochemicals.jpeg");
+            font-family:Arial, Helvetica, sans-serif;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            display:flex;
+            height:100vh;
+            justify-content:center;
+            align-items:center;
+            font-size:40px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+                function saveDateTime() {
+    const now = new Date();
+    localStorage.setItem('savedDateTime', now);
+    alert('form submit with your date and time');
+}
+
+function showDateTime() {
+    const savedDateTime = localStorage.getItem('savedDateTime');
+    if (savedDateTime) {
+        document.getElementById('output').innerText = `Saved Date and Time: ${savedDateTime}`;
+    } else {
+        document.getElementById('output').innerText = 'No date and time saved yet.';
+    }
+}
+function data() {
+           
+            var b = document.getElementById("n2").value.trim();
+            else if(b.length<10||b.length>10)
+            {
+                alert("Number should be of 10 digit! Please enter valid number");
+                return false;
+            }
+        }
+    </script>
+    <form>
+        
+        <fieldset>
+            <legend><h1>Registration</h1></legend>
+            <label for="name">Name</label>
+            <input type="text" id="n1"><br><!-- place holder we use for watermark ane name is atribute for store data in database-->
+            Email: <input type="email" name="myemail" placeholder="Email" required><br>
+            Password: <input type="password" id="n3"><br>
+            Number: <input type="text" id="n2"><br>
+            Gender: Male<input type="radio" name="mygender">
+            Female: <input type="radio" name="mygender">
+            other: <input type="radio" name="mygender" required><br>
+            <!--Hobbies: Reading<input type="checkbox">singing<input type="checkbox"><br><br>-->
+            <label for="country">Country:</label>
+            <select id="country">
+                <option>select</option>
+                <option>India</option>
+                <option>usa</option>
+                <option>others</option>
+            </select><br>
+            <!--<input type="file" name="myfile"><br><br>-->
+
+            About Yourself:<br>
+            <textarea name="mytext" rows="5" cols="50"></textarea><br>
+           
+
+            
+            <button onclick="saveDateTime()">submit</button>
+            <button onclick="showDateTime()">insert date and time</button>
+            <div id="output"></div>
+            <script src="script.js"></script>
+            <input type="reset" value="Reset form">
+
+
+
+
+
+        </fieldset>
+
+
+    </form>
+    
+</body>
+</html>
